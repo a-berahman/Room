@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/String_Manipulation/bin/Debug/netcoreapp3.1/String_Manipulation.dll",
+            "program": "${workspaceFolder}/Recursion_and_Backtracking/bin/Debug/netcoreapp3.1/Recursion_and_Backtracking.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/String_Manipulation",
+            "cwd": "${workspaceFolder}/Recursion_and_Backtracking",
             "console": "internalConsole",
             "stopAtEntry": false
         },
