@@ -29,7 +29,7 @@ namespace String_Manipulation.HackerRank
                         _memo[j] = _previous + 1;
                     else _memo[j] = Math.Max(_memo[j], _memo[j - 1]);
                     //so i fill up _previus variable with _memo variable but previus
-                    //_memo variable that before assigning a new variable in top operation
+                    //_memo variable that before assigning a new variable in above operation
                     //that i keep in _temp variable
                     _previous = _temp;
                 } 
