@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Recursion_and_Backtracking/bin/Debug/netcoreapp3.1/Recursion_and_Backtracking.dll",
+            "program": "${workspaceFolder}/Dynamic_Programming/bin/Debug/netcoreapp3.1/Dynamic_Programming.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Recursion_and_Backtracking",
+            "cwd": "${workspaceFolder}/Dynamic_Programming",
             "console": "internalConsole",
             "stopAtEntry": false
         },
