@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/String_Manipulation/bin/Debug/netcoreapp3.1/String_Manipulation.dll",
+            "program": "${workspaceFolder}/Dynamic_Programming/bin/Debug/netcoreapp3.1/Dynamic_Programming.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/String_Manipulation",
+            "cwd": "${workspaceFolder}/Dynamic_Programming",
             "console": "internalConsole",
             "stopAtEntry": false
         },
