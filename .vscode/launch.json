@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Dynamic_Programming/bin/Debug/netcoreapp3.1/Dynamic_Programming.dll",
+            "program": "${workspaceFolder}/PlayGround/bin/Debug/netcoreapp3.1/PlayGround.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Dynamic_Programming",
+            "cwd": "${workspaceFolder}/PlayGround",
             "console": "internalConsole",
             "stopAtEntry": false
         },
