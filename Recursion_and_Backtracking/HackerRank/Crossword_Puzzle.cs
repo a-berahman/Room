@@ -6,13 +6,10 @@ namespace Recursion_and_Backtracking.HackerRank
 {
     public class Crossword_Puzzle
     {
-        static char[][] PuzzleBoard;
-        static string[] Words;
+        public char[][] PuzzleBoard;
+        public string[] Words;
 
-
-
-
-        static string[] crosswordPuzzle(string[] crossword, string word)
+        public string[] crosswordPuzzle(string[] crossword, string word)
         {
             var _result = new string[10];
             Words = word.Split(';');
@@ -35,7 +32,7 @@ namespace Recursion_and_Backtracking.HackerRank
 
         }
 
-        static bool BoardPrepare(int wordindex)
+        public bool BoardPrepare(int wordindex)
         {
             if (wordindex == Words.Length) return true;
 
@@ -50,7 +47,7 @@ namespace Recursion_and_Backtracking.HackerRank
             return false;
         }
 
-        static bool CheckVertical(int x, int y, int wordIndex)
+        public bool CheckVertical(int x, int y, int wordIndex)
         {
             if (10 - y < Words[wordIndex].Length) return false;
             for (int i = y; i < y + Words[wordIndex].Length; i++)
@@ -71,7 +68,7 @@ namespace Recursion_and_Backtracking.HackerRank
             }
             return false;
         }
-        static bool CheckHorizontal(int x, int y, int wordIndex)
+        public bool CheckHorizontal(int x, int y, int wordIndex)
         {
             if (10 - x < Words[wordIndex].Length) return false;
             for (int i = x; i < x + Words[wordIndex].Length; i++)
@@ -92,6 +89,6 @@ namespace Recursion_and_Backtracking.HackerRank
             }
             return false;
         }
-   
+
     }
 }
