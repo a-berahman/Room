@@ -1,7 +1,11 @@
+using System;
+using Tree.Model;
+
 namespace Tree.HackerRank
 {
     public class Height_of_a_Binary_Tree
     {
+        //we should traversing recursively right and left side of tree
         public int height(Node tree)
         {
             var _result = EdgesCounter(tree);
@@ -16,13 +20,5 @@ namespace Tree.HackerRank
 
             return _leftEdgeCount > _rightEdgeCount ? _leftEdgeCount + 1 : _rightEdgeCount + 1;
         }
-    }
-
-
-    public class Node
-    {
-        public Node Left { get; set; }
-        public Node Right { get; set; }
-        public int Value { get; set; }
     }
 }
