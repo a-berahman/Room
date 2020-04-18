@@ -9,9 +9,6 @@ namespace Recursion_and_Backtracking.HackerRank
         public char[][] PuzzleBoard;
         public string[] Words;
 
-
-
-
         public string[] crosswordPuzzle(string[] crossword, string word)
         {
             var _result = new string[10];
@@ -92,6 +89,6 @@ namespace Recursion_and_Backtracking.HackerRank
             }
             return false;
         }
-   
+
     }
 }
