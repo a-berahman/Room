@@ -71,4 +71,45 @@ namespace Stacks_Queues.Algorithm
         }
 
     }
+
+    public class StackWithArray<T>
+    {
+        //use array to store N items on stack
+        private T[] Head { get; set; }
+        private int N = 0;
+
+
+
+        public StackWithArray(int lengthOfArray)
+        {
+            Head = new T[lengthOfArray];
+        }
+
+        /// <summary>
+        /// add a new object to the top of the stack
+        /// </summary>
+        public void Push(T item)
+        {
+            Head[N++] = item;
+        }
+        /// <summary>
+        /// remove a object on top of the stack
+        /// </summary>
+        public T Pop()
+        {
+            return Head[--N]; //it is loitering, what is loitering? Holding refence to an object when it is no longer needed
+
+            //if you want to avoids loitering:
+            //garbage collector can reclaim memory
+            //only if no outstanding reference
+            // T item = Head[--N];
+            // Head[N] = default(T);
+            // return item;
+        }
+
+        public bool isEmpty()
+        {
+            return N == 0;
+        }
+    }
 }
