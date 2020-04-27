@@ -7,7 +7,7 @@ namespace Stacks_Queues.Algorithm
     /// elements are being added to the top of the stack and get removed from top as well
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class Stack<T>
+    public class StackWithLinkedList<T>
     {
         protected Node<T> Head { get; set; }
 
@@ -80,9 +80,9 @@ namespace Stacks_Queues.Algorithm
 
 
 
-        public StackWithArray(int lengthOfArray)
+        public StackWithArray()
         {
-            Head = new T[lengthOfArray];
+            Head = new T[1];
         }
 
         /// <summary>
@@ -90,21 +90,39 @@ namespace Stacks_Queues.Algorithm
         /// </summary>
         public void Push(T item)
         {
+            var _copyOfArray = Head;
+            //set double size of array when array is full
+            if (N == Head.Length) DoResize(Head.Length * 2);
             Head[N++] = item;
         }
+        /// <summary>
+        /// change array size
+        /// </summary>
+        private void DoResize(int arrayLenght)
+        {
+            var _copyOfArray = new T[arrayLenght];
+            for (int i = 0; i < N; i++)
+                _copyOfArray[i] = Head[i];
+            Head = _copyOfArray;
+        }
+
         /// <summary>
         /// remove a object on top of the stack
         /// </summary>
         public T Pop()
         {
-            return Head[--N]; //it is loitering, what is loitering? Holding refence to an object when it is no longer needed
+            //it is loitering, what is loitering? Holding reference to an object when it is no longer needed
+            //return Head[--N]; 
 
             //if you want to avoids loitering:
             //garbage collector can reclaim memory
             //only if no outstanding reference
-            // T item = Head[--N];
-            // Head[N] = default(T);
-            // return item;
+            T item = Head[--N];
+            Head[N] = default(T);
+            //halve size of array when array is one-quarter full
+            if (N > 0 && N == Head.Length / 4) DoResize(Head.Length / 2);
+
+            return item;
         }
 
         public bool isEmpty()
