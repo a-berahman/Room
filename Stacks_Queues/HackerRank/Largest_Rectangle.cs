@@ -8,7 +8,7 @@ namespace Stacks_Queues.HackerRank
         public long largestRectangle(int[] h)
         {
             // first of all i define variable which type is stack.
-            var _stack = new Stack<int>();
+            var _stack = new StackWithLinkedList<int>();
 
             var _maximum_area = 0; //as a result that should return at the end of method
             var _lengthOfArray = h.Length;

@@ -11,7 +11,7 @@ namespace Stacks_Queues.HackerRank
                 return "NO";
 
             var _currentValues = s.ToCharArray();
-            var _stack = new Algorithm.Stack<char>();
+            var _stack = new Algorithm.StackWithLinkedList<char>();
             for (int i = 0; i < _currentValues.Length; i++)
             {
                 if (_currentValues[i].isOpenBracket())
