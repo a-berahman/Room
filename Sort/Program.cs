@@ -6,9 +6,11 @@ namespace Sort
     {
         static void Main(string[] args)
         {
-            // new Algorithm.SelectionSort().DoSort();
+           // new Algorithm.SelectionSort().DoSort();            
+           // new Algorithm.InsertionSort().DoSort();
+              new Algorithm.ShellSort().DoSort();
             
-            new Algorithm.ShellSort().DoSort();
+
         }
     }
 }
