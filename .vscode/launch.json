@@ -10,9 +10,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/PlayGround/bin/Debug/netcoreapp3.1/PlayGround.dll",
+            "program": "${workspaceFolder}/Sort/bin/Debug/netcoreapp3.1/Sort.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/PlayGround",
+            "cwd": "${workspaceFolder}/Sort",
             "console": "externalTerminal",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
