@@ -9,7 +9,7 @@ namespace Sort.Algorithm
         {
             auxirity = new int[arr.Length];
             Sort(arr, auxirity, 0, arr.Length - 1);
-            Console.Write(string.Join(",", auxirity));
+            Console.Write(string.Join(",", arr));
         }
 
         private void Sort(int[] arr, int[] auxirity, int lo, int hi)
@@ -40,6 +40,40 @@ namespace Sort.Algorithm
         private bool Less(int p, int q)
         {
             return p.CompareTo(q) < 0;
+        }
+    }
+
+    public class MergeSortBU
+    {
+        public void DoSort(int[] arr)
+        {
+            var _length = arr.Length;
+            var _auxiliary = new int[_length];
+            for (int siz = 1; siz < _length; siz += siz)
+                for (int j = 0; j < _length - siz; j += siz + siz)
+                    DoMerge(arr, _auxiliary, j, j + siz - 1, Math.Min(j + siz + siz - 1, _length - 1));
+
+            Console.Write(string.Join(", ", arr));
+        }
+
+        private void DoMerge(int[] arr, int[] auxiliary, int low, int mid, int high)
+        {
+            int i = low; int j = mid + 1;
+            for (int k = 0; k < arr.Length; k++)
+                auxiliary[k] = arr[k];
+
+            for (int k = low; k < high; k++)
+            {
+                if (i > mid) arr[k] = auxiliary[j++];
+                else if (j > high) arr[k] = auxiliary[i++];
+                else if (Less(auxiliary[j], auxiliary[i])) arr[k] = auxiliary[j++];
+                else arr[k] = auxiliary[i++];
+            }
+        }
+
+        private bool Less(int v1, int v2)
+        {
+            return v1.CompareTo(v2) < 0;
         }
     }
 }
