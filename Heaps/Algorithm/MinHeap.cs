@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace PlayGround.Heaps
+namespace Heaps.Algorithm
 {
     public class MinHeap
     {

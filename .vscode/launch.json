@@ -10,9 +10,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Sort/bin/Debug/netcoreapp3.1/Sort.dll",
+            "program": "${workspaceFolder}/Heaps/bin/Debug/netcoreapp3.1/Heaps.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Sort",
+            "cwd": "${workspaceFolder}/Heaps",
             "console": "externalTerminal",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"

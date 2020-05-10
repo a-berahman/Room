@@ -20,7 +20,7 @@ namespace Stacks_Queues.Algorithm.PriorityQueues
                 if (Less(_max, i)) _max = i;
             //at the end switch max index with last index of array
             Exch(_max, N - 1);
-            //retyrn max array and loitering
+            //return max array and loitering
             return PQ[--N];
         }
 
