@@ -32,6 +32,8 @@ namespace String_Manipulation
             //Solution in hackerrank platform is 'https://bit.ly/3aM7qQP'
             //Console.WriteLine(new HackerRank.Common_Child().commonChild("WEWOUCUIDGCGTRMEZEPXZFEJWISRSBBSYXAYDFEJJDLEBVHHKS", "FDAGCXGKCTKWNECHMRXZWMLRYUCOCZHJRRJBOAJOQJZZVUYXIC"));
 
+            //Problem statment is 'Super Reduced String' -> https://links.berahman.me/reduced-string
+            //Console.WriteLine(new HackerRank.Super_Reduced_String().superReducedString("aaabccddd"));
         }
     }
 }
