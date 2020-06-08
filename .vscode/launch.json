@@ -10,9 +10,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Heaps/bin/Debug/netcoreapp3.1/Heaps.dll",
+            "program": "${workspaceFolder}/Arrays_String/bin/Debug/netcoreapp3.1/Arrays_String.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Heaps",
+            "cwd": "${workspaceFolder}/Arrays_String",
             "console": "externalTerminal",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
