@@ -1,4 +1,6 @@
 
+using LinkedLists.Model;
+
 namespace LinkedLists.LeetCode
 {
     public class Merge_Two_Sorted_Lists

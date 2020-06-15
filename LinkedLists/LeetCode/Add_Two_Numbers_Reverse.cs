@@ -1,4 +1,6 @@
 
+using LinkedLists.Model;
+
 namespace LinkedLists.LeetCode
 {
     public class Add_Two_Numbers_Reverse

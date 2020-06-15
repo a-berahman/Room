@@ -10,9 +10,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Arrays_String/bin/Debug/netcoreapp3.1/Arrays_String.dll",
+            "program": "${workspaceFolder}/LinkedLists/bin/Debug/netcoreapp3.1/LinkedLists.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Arrays_String",
+            "cwd": "${workspaceFolder}/LinkedLists",
             "console": "externalTerminal",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
