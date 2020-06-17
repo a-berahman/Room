@@ -34,6 +34,8 @@ namespace String_Manipulation
 
             //Problem statment is 'Super Reduced String' -> https://links.berahman.me/reduced-string
             //Console.WriteLine(new HackerRank.Super_Reduced_String().superReducedString("aaabccddd"));
+
+            Console.WriteLine(new HackerRank.StrongPassword().minimumNumber(4,"1111"));
         }
     }
 }
