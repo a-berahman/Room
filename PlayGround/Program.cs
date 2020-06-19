@@ -1,148 +1,83 @@
-﻿using System;
+﻿using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
+using System;
 
-namespace PlayGround
+class Result
 {
-    class Program
+
+    /*
+     * Complete the 'diagonalDifference' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+     */
+public static int right { get; set; }
+public static int left { get; set; }
+    public static int diagonalDifference(List<List<int>> arr)
     {
-        static void Main(string[] args)
-        {
-            // int _inputCount = int.Parse(Console.ReadLine());
-            // var _uf = new PlayGround.DynamicConnectivity.UF();
-            // while (--_inputCount >= 0)
-            // {
-            //     int p = int.Parse(Console.ReadLine());
-            //     int q = int.Parse(Console.ReadLine());
-
-            //     if (!_uf.isConnected(p, q))
-            //     {
-
-            //     }
-            //     else
-            //     {
-            //         Console.WriteLine("connected");
-            //     }
-
-            // }
-
-
-            // Console.ReadLine();
-        }
+        right=0;
+left=0;
+        return recursive(arr, 0);
     }
-}
-
-namespace PlayGround.DynamicConnectivity.QuickFind
-{
-    public class UF
+    public static int recursive(List<List<int>> arr, int index)
     {
-        public int[] Ids { get; set; }
-        public UF(int n)
-        {
-            Ids = new int[n];
-            for (int i = 0; i < n; i++)
-                Ids[i] = i;
-        }
+        if (index > 2)
+            return 0;
 
-        public bool isConnected(int p, int q)
+        
+        switch (index)
         {
-            return Ids[p] == Ids[q];
+            case 0:
+                right += arr[index][2];
+                left += arr[index][0];
+                break;
+            case 1:
+                right += arr[index][1];
+                left += arr[index][1];
+                break;
+            case 2:
+                right += arr[index][0];
+                left += arr[index][2];
+                break;
+            default:
+                break;
         }
-
-        public void Union(int p, int q)
-        {
-            for (int i = 0; i < Ids.Length; i++)
-            {
-                if (Ids[i] == Ids[p]) Ids[i] = Ids[q];
-            }
-        }
+        recursive(arr, index++);
+        return left - right;
 
     }
 }
 
-namespace PlayGround.DynamicConnectivity.QuickUnion
+class Solution
 {
-    public class UF
+    public static void Main(string[] args)
     {
-        public int[] Ids { get; set; }
-        public UF(int n)
+        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
+        int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+        List<List<int>> arr = new List<List<int>>();
+
+        for (int i = 0; i < n; i++)
         {
-            Ids = new int[n];
-            for (int i = 0; i < n; i++)
-                Ids[i] = i;
+            arr.Add(Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
         }
 
-        public int Root(int i)
-        {
-            while (Ids[i] != i) i = Ids[i];
-            return i;
-        }
+        int result = Result.diagonalDifference(arr);
 
+        textWriter.WriteLine(result);
 
-        public bool Connected(int p, int q)
-        {
-            return Root(p) == Root(q);
-        }
-
-        public void Union(int p, int q)
-        {
-            int i = Root(p);
-            int j = Root(q);
-            Ids[i] = j;
-        }
+        textWriter.Flush();
+        textWriter.Close();
     }
-}
-
-namespace PlayGround.DynamicConnectivity.WQUPC
-{
-    public class UF
-    {
-        public int[] Ids { get; set; }
-        public int[] Siz { get; set; }
-        public UF(int n)
-        {
-            Ids = new int[n];
-            Siz = new int[n];
-            for (int i = 0; i < n; i++)
-            {
-                Ids[i] = i;
-            }
-
-            for (int i = 0; i < n; i++)
-            {
-                Siz[i] = 1;
-            }
-        }
-
-        public int Root(int i)
-        {
-            while (i != Ids[i])
-            {
-                Ids[i] = Ids[Ids[i]];
-                i = Ids[i];
-            }
-
-            return i;
-        }
-        public bool Connected(int p, int q)
-        { return Root(p) == Root(q); }
-
-        public void Union(int p, int q)
-        {
-            int pid = Root(p);
-            int qid = Root(q);
-
-            if (Siz[pid] <= Siz[qid])
-            {
-                Ids[pid] = qid;
-                Siz[qid] += Siz[pid];
-            }
-            else
-            {
-                Ids[qid] = pid;
-                Siz[pid] += Siz[qid];
-            }
-        }
-    }
-
 }
