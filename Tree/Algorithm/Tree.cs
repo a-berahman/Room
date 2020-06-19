@@ -9,7 +9,7 @@ namespace Tree.Algorithm
         {
             if (tree == null) return null;
             if (tree.Value == value) return tree;
-            if (value <= tree.Value) return Search(tree.Left, value);
+            if (value < tree.Value) return Search(tree.Left, value);
             return Search(tree.Right, value);
         }
 
