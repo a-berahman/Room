@@ -23,9 +23,10 @@ namespace Implementation.HackerRank
             var minimumB = b.Min(); //Time-complexity O(m)
             var counter = 1;
             var multipleOfMaxA = maximumA;
-
+            
             while (multipleOfMaxA <= minimumB)
             {
+
                 var factorOfAll = true;
 
                 foreach (var item in a) //Time complexity O(n)
