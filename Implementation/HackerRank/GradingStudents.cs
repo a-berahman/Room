@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Implementation.HackerRank
 {
     public class GradingStudents
