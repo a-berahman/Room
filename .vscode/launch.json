@@ -10,9 +10,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/String_Manipulation/bin/Debug/netcoreapp3.1/String_Manipulation.dll",
+            "program": "${workspaceFolder}/Implementation/bin/Debug/netcoreapp3.1/Implementation.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/String_Manipulation",
+            "cwd": "${workspaceFolder}/Implementation",
             "console": "externalTerminal",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
