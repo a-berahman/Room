@@ -7,7 +7,7 @@ namespace Implementation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new HackerRank.Birthday_Chocolate().birthday(new List<int>{4},4,1));
+            Console.WriteLine(new HackerRank.Drawing_Book().pageCount(5,4));
         }
     }
 }
