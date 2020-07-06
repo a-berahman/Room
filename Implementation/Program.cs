@@ -7,7 +7,7 @@ namespace Implementation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new HackerRank.Drawing_Book().pageCount(5,4));
+            Console.WriteLine(new HackerRank.Designer_PDF_Viewer().designerPdfViewer(new int[]{},""));
         }
     }
 }
