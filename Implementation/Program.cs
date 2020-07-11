@@ -7,7 +7,7 @@ namespace Implementation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new HackerRank.Designer_PDF_Viewer().designerPdfViewer(new int[]{},""));
+            Console.WriteLine(new HackerRank.beautiful_days_at_the_movies().beautifulDays(20,23,6));
         }
     }
 }
