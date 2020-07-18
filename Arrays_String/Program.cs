@@ -18,7 +18,9 @@ namespace Arrays_String
             // Console.WriteLine("{0} -> {1}", input, ans);
 
             // Console.WriteLine(new CrackingTheCodingInterview.Palindrome_Permutation().IsPermutationOfPalindrome("Tact Coa"));
-            Console.WriteLine(new CrackingTheCodingInterview.One_Away().IsOneEditDistance("pale", "ple"));
+            //Console.WriteLine(new CrackingTheCodingInterview.One_Away().IsOneEditDistance("pale", "ple"));
+
+            //new HackerRank.Circular_Array_Rotation().circularArrayRotation(new int[3]{1,2,3},2,new int[3]{0,1,2});
         }
     }
 }
