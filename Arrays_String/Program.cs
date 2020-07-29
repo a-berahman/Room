@@ -21,6 +21,12 @@ namespace Arrays_String
             //Console.WriteLine(new CrackingTheCodingInterview.One_Away().IsOneEditDistance("pale", "ple"));
 
             //new HackerRank.Circular_Array_Rotation().circularArrayRotation(new int[3]{1,2,3},2,new int[3]{0,1,2});
+            var res=new Arrays_String.HackerRank.Missing_Numbers().missingNumbers(new int[10]{203 ,204 ,205, 206 ,207 ,208 ,203, 204 ,205 ,206},
+            new int[14]{203 ,204 ,204 ,205 ,206,205 ,207 ,205 ,208 ,203 ,206 ,205 ,206, 204});
+            foreach (var item in res)
+            {
+            Console.WriteLine(item);    
+            }
             
         }
 
