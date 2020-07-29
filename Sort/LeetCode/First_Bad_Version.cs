@@ -20,7 +20,7 @@ namespace Sort.LeetCode
             }
             return left;
         }
-        //sample baraye inke error nade
+        //it's a sample method
         private bool IsBadVersion(int mid)
         {
             return true;
