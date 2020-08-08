@@ -8,7 +8,7 @@ namespace Implementation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new Implementation.HackerRank.Append_and_Delete().appendAndDelete("aba","aba",7));
+            Console.WriteLine(new Implementation.HackerRank.Cut_the_sticks().cutTheSticks(new int[6]{5 ,4 ,4 ,2 ,2 ,8}));
         }
     }
 }
