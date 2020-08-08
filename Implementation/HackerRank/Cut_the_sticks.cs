@@ -9,7 +9,9 @@ namespace Implementation.HackerRank
         {
             Array.Sort(arr);
             var len=arr.Length;
-            if(arr[0]==arr[len-1]) return arr;
+            if(len<=1) return new int[1]{1};
+            if(arr[0]==arr[len-1]) return   new int[1]{arr.Length};
+            
 
             var res=new List<int>();
             res.Add(len);
@@ -17,9 +19,9 @@ namespace Implementation.HackerRank
                 var count=0;
                 if(arr[i]==0) continue;
                 var min=arr[i];
-                for(int j=0; j<len && arr[j]!=0;j++)
+                for(int j=0; j<len ;j++)
                 {
-                    
+                    if(arr[j]==0) continue;
                     arr[j]=arr[j]-min;
                     if(arr[j]!=0) count++;
                 }
