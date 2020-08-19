@@ -20,45 +20,34 @@ func findClosestElements(arr []int, k int, x int) []int {
 				left = mid + 1
 			}
 		}
-		if arr[mid] == x {
-			return mid
-		}
+
 		return left
 	}()
 	if index < 0 {
 		index = -index - 1
 	}
+
 	low := func() int {
 		if index-k-1 > 0 {
 			return index - k - 1
 		}
 		return 0
-	}
+	}()
 
 	high := func() int {
-		if arr[len(arr)-1] < index+k-1 {
-			return arr[len(arr)-1]
+		if len(arr)-1 < index+k-1 {
+			return len(arr) - 1
 		}
 		return index + k - 1
-	}
+	}()
 
-	//min, max := GetMinAndMax(arr)
-
-}
-
-func GetMinAndMax(arr []int) (int, int) {
-	if len(arr) < 1 {
-		log.Fatal("input length must be more than 0")
-	}
-	min := arr[0]
-	max := arr[0]
-	for _, value := range arr {
-		if value < min {
-			min = value
-		}
-		if value > max {
-			max = value
+	for high-low > k-1 {
+		if low < 0 || (x-arr[low]) <= (arr[high]-x) {
+			high--
+		} else if high > len(arr)-1 || (x-arr[low]) > (arr[high]-x) {
+			low++
 		}
 	}
-	return min, max
+	return arr[low : high+1]
+
 }
