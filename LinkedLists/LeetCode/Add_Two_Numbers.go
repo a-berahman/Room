@@ -32,4 +32,10 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			l2 = l2.Next
 		}
 	}
+
+	if carry > 0 {
+		head.Next = &ListNode{Val: carry}
+	}
+	return main.Next
+
 }
